@@ -4,25 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Sign up for your book club account!</h1>
-    <form>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required><br><br>
-
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required><br><br>
+    <main>
+    <h1>Book Club Registration Form</h1>
+    <h2>Sign up for your book club account!</h2>
+    <form action ="" class="main_form" id="main_form">
+        <!--First Name-->
+        <div class="main_form_field">
+            <label for="firstName" class="main_form_field_label">First Name:</label>
+            <input type="text" id="firstName" class="main_form_field_input" required><br><br>
+        </div>
         
+        <!--Last Name-->
+        <div class="main_form_field">
+            <label for="lastName" class="main_form_field_label">Last Name:</label>
+            <input type="text" id="lastName" class="main_form_field_input" required><br><br>
+        </div>
+
+        <!--Email-->
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br>
         <br>
-
+        <!--Password-->
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required minlength="6"><br>
         <p>Passwords must be at least 6 characters.</p>
         <br><br>
-
+        <!--Birth Date-->   
         <label for="birthDate">Birth Date:</label>
         <input type="date" id="birthDate" name="birthDate" required><br><br>
         
@@ -49,8 +61,14 @@
         <br>
         <br>
 
-        <input type="submit" value="Submit">
+        <button class="main_form_submit" type="submit">Submit</button>
     </form>
+    
+        <div id="output">
+
+        </div>
+    </main>
+    <!--JavaScript -->
 
     <script src="script.js"></script>
 </body>
