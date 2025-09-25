@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Sign up for your book club account!</h1>
+    <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6"><br>
+        <p>Passwords must be at least 6 characters.</p>
+        <br><br>
+
+        <label for="birthDate">Birth Date:</label>
+        <input type="date" id="birthDate" name="birthDate" required><br><br>
+        
+        <label for="interests">Select Your Interests for Reading:</label>
+        <p>Select as many as you're interested in</p>
+        <input type="checkbox" id="interest-scifi" name="interests[]" value="scifi">
+        <label for="interest-scifi">Science Fiction</label><br>
+
+        <input type="checkbox" id="interest-history" name="interests[]" value="history">
+        <label for="interest-history">History</label><br>
+
+        <input type="checkbox" id="interest-politics" name="interests[]" value="politics">
+        <label for="interest-politics">Politics</label><br><br><br>
+
+        <input type="checkbox" id="interest-romance" name="interests[]" value="romance">
+        <label for="interest-romance">Romance</label><br><br>
+        
+        <input type="checkbox" id="interest-selfHelp" name="interests[]" value="selfHelp">
+        <label for="interest-selfHelp">Self-Help</label><br><br>
+        
+        <input type="checkbox" id="interest-biographies" name="interests[]" value="biographies">
+        <label for="interest-biographies">Biographies</label><br><br>
+
+        <br>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
