@@ -13,53 +13,71 @@
     <h1>Book Club Registration Form</h1>
     <h2>Sign up for your book club account!</h2>
     <form action ="" class="main_form" id="main_form">
-        <!--First Name-->
-        <div class="main_form_field">
-            <label for="firstName" class="main_form_field_label">First Name:</label>
-            <input type="text" id="firstName" class="main_form_field_input" required><br><br>
-        </div>
+        <!--Name Fields in a Row-->
+        <div class="main_form_row">
+            <!--First Name-->
+            <div class="main_form_field">
+                <label for="firstName" class="main_form_field_label">First Name:</label>
+                <input type="text" id="firstName" class="main_form_field_input" required>
+            </div>
         
-        <!--Last Name-->
-        <div class="main_form_field">
-            <label for="lastName" class="main_form_field_label">Last Name:</label>
-            <input type="text" id="lastName" class="main_form_field_input" required><br><br>
+            <!--Last Name-->
+            <div class="main_form_field">
+                <label for="lastName" class="main_form_field_label">Last Name:</label>
+                <input type="text" id="lastName" class="main_form_field_input" required>
+            </div>
         </div>
 
-        <!--Email-->
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-        <br>
-        <!--Password-->
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required minlength="6"><br>
-        <p>Passwords must be at least 6 characters.</p>
-        <br><br>
-        <!--Birth Date-->   
-        <label for="birthDate">Birth Date:</label>
-        <input type="date" id="birthDate" name="birthDate" required><br><br>
-        
+        <!--Email and password in a row-->
+        <div class="main_form_row">
+            <div class="main_form_field">
+            <!--Email-->
+                <label for="email" class="main_form_field_label">Email:</label>
+                <input type="email" id="email" class="main_form_field_input" required>
+            </div>
+            <!--Password-->
+            <div class="main_form_field">
+                <label for="password" class="main_form_field_label">Password:</label>
+                <input type="password" id="password" class="main_form_field_input" required minlength="6">
+                <p>Passwords must be at least 6 characters.</p>
+            </div>
+        </div>
+
+        <!--Birth Date-->  
+        <div class="main_form_field">
+            <label for="birthDate" class="main_form_field_label">Birth Date:</label>
+            <input type="date" id="birthDate" class="main_form_field_input"  required>
+        </div>
+
+        <div class="main_form_row">
+        <!--Interests-->
+        <div class="main_form_field">
         <label for="interests">Select Your Interests for Reading:</label>
         <p>Select as many as you're interested in</p>
-        <input type="checkbox" id="interest-scifi" name="interests[]" value="scifi">
-        <label for="interest-scifi">Science Fiction</label><br>
+        </div>
+        <div class="checkbox_group">
+        <input type="checkbox" id="interest-scifi" class="checkbox_item_input" value="scifi">
+        <label for="interest-scifi" class="checkbox_item_label" >Science Fiction</label>
 
-        <input type="checkbox" id="interest-history" name="interests[]" value="history">
-        <label for="interest-history">History</label><br>
+        <input type="checkbox" id="interest-fantasy" class="checkbox_item_input" value="fantasy">
+        <label for="interest-fantasy" class="checkbox_item_label">Fantasy</label>
 
-        <input type="checkbox" id="interest-politics" name="interests[]" value="politics">
-        <label for="interest-politics">Politics</label><br><br><br>
+        <input type="checkbox" id="interest-history" class="checkbox_item_input" value="history">
+        <label for="interest-history" class="checkbox_item_label">History</label>
 
-        <input type="checkbox" id="interest-romance" name="interests[]" value="romance">
-        <label for="interest-romance">Romance</label><br><br>
+        <input type="checkbox" id="interest-politics" class="checkbox_item_input"value="politics">
+        <label for="interest-politics" class="checkbox_item_label">Politics</label>
+
+        <input type="checkbox" id="interest-romance" class="checkbox_item_input" value="romance">
+        <label for="interest-romance" class="checkbox_item_label">Romance</label>
         
-        <input type="checkbox" id="interest-selfHelp" name="interests[]" value="selfHelp">
-        <label for="interest-selfHelp">Self-Help</label><br><br>
+        <input type="checkbox" id="interest-selfHelp" class="checkbox_item_input"value="selfHelp">
+        <label for="interest-selfHelp" class="checkbox_item_label">Self-Help</label>
         
-        <input type="checkbox" id="interest-biographies" name="interests[]" value="biographies">
-        <label for="interest-biographies">Biographies</label><br><br>
-
-        <br>
-        <br>
+        <input type="checkbox" id="interest-biographies" class="checkbox_item_input" value="biographies">
+        <label for="interest-biographies" class="checkbox_item_label">Biographies</label>
+        </div>
+        </div>
 
         <button class="main_form_submit" type="submit">Submit</button>
     </form>
