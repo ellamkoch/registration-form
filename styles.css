@@ -9,6 +9,20 @@ body {
 
 }
 
+b {
+    color: red;
+    font-size: 10px;
+
+}
+
+em {
+    color: green;
+    font-size: 10px;
+    font-weight: bolder;
+    gap: 10px;
+
+}
+
 .main_form {
     background-color: blanchedalmond;
     display: flex;
@@ -20,7 +34,7 @@ body {
     box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
     margin: 0 auto;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     gap: 10px;
 
 }
