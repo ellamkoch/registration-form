@@ -1,0 +1,149 @@
+
+/* headings */
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+
+}
+/* password warning style */
+b {
+    color: red;
+    font-size: 10px;
+
+}
+/* instruction text style for interests*/
+em {
+    font-size: 12px;
+    color: #555;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+/*main form container */
+.main_form {
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column; /*stacks items vertically*/
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
+    margin: 0 auto;
+    width: 100%; /*full width on small screens*/
+    max-width: 800px;
+    gap: 10px;
+
+}
+/* rows within the form */
+.main_form_row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+
+}
+/* individual form fields */
+.main_form_field {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+/* labels for form fields */
+.main_form_field_label {
+    font-weight: bold;
+    
+}
+/* input fields style */
+.main_form_field_input {
+    border: solid 1px gray;
+    padding: 8px;
+    border-radius: 5px;
+
+}
+/* input focus style */
+.main_form_field_input:focus {
+    border-color: blue;
+    outline: rgb(0, 0, 255);
+
+}
+
+.main_form_field label {
+    font-size: 14px;
+    font-weight: bold;
+
+}
+/* interests section style */
+.main_form_row.interests { /*makes this so the legent sits right above the checkboxes */
+    flex-direction: column; /*stacks items vertically*/
+    align-items: stretch; /*makes the field take full width*/
+    gap: 5px;
+}
+
+/* styles for container for checkbox group  */
+.checkbox_group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+/* individual checkbox item styles */
+.checkbox_item_input {
+    margin-right: 3px;
+
+}
+/* label style for checkbox items */
+.checkbox_item_label {
+    margin-right: 18px;
+    font-size: 14px;
+    line-height: 1.3;
+
+}
+
+/* submit button styles */
+.main_form_submit {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /*transitions background color smoothly*/
+
+}
+/* hover and active states for submit button */
+.main_form_submit:hover {
+    background-color: darkblue;
+    transform: scale(1.05); /*slightly enlarges button on hover*/
+}
+
+.main_form_submit:active {
+    background-color: navy;
+    transform: scale(0.95); /*slightly shrinks button on click*/
+}
+
+/* output section styles */
+#output {
+    display: none; /*hidden by default*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
+    margin: 10px auto;
+    width: 100%;
+    max-width: 800px;
+    gap: 10px;
+
+}
