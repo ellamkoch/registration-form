@@ -10,38 +10,42 @@ const password = document.getElementById("password");
 const birthDate = document.getElementById("birthDate");
 const interests = document.querySelectorAll(".checkbox_item_input"); // select all checkboxes with this class
 
-//Event Listeners
-mainForm.addEventListener('submit', function (e) {
-    // Prevent the action from the form to refresh the page
+//Event Listener
+mainForm.addEventListener("submit", function (e) {
+    // Prevents page refresh on submit
     e.preventDefault();
 
-    console.log(`FirstName: ${firstName.value}`);
-    console.log(`LastName: ${lastName.value}`);
-    console.log(`Email: ${email.value}`);
-    console.log(`Password: ${password.value}`);// Wouldn't do this in a real app for security reasons
-    console.log(`Birth Date: ${birthDate.value}`);
+   // console.log(`FirstName: ${firstName.value}`);
+   // console.log(`LastName: ${lastName.value}`);
+   // console.log(`Email: ${email.value}`);
+   // console.log(`Password: ${password.value}`);// Wouldn't do this in a real app for security reasons
+   // console.log(`Birth Date: ${birthDate.value}`);
    
     // Loop through the checkboxes to see which ones are checked
-    const selectedInterests = [];
-    interests.forEach((box) => {
-       console.log (`Interest: ${box.value}, Checked: ${box.checked}`);
-        if(interest.checked) {
-            selectedInterests.push(box.value);
-        }
-    }); 
+    //const selectedInterests = []; // makes array to hold selected interests
+    //interests.forEach((box) => { // loops through each checkox in nodelist called "interests"
+     //  console.log (`Interest: ${box.value}, Checked: ${box.checked}`); //logs value and checked status of each box
+       // if(box.checked) { // if a box is checked, next line then logs the value into the selectedIntersts array
+        //    selectedInterests.push(box.value);
+       // }
+    //}); 
+
+    const interestsText = selectedInterests.length // check if any interests were selected
+            ? selectedInterests.join(", ") // join them into a comma separated string ? is shorthand for an if/then statement. In this case, the ? tells the code to do the next thing if true. 
+            // The : is shorthand for else, so if false, do the thing after the :
+            : "None selected"; // if none selected, this is shown instead
+
+
 
     // Output results of the form
-    const interestsText = selectedInterests.length // check if any interests were selected
-        ? selectedInterests.join(", ") // join them into a comma separated string
-        : "None selected"; // if none selected, this is shown instead
-
     outputDiv.innerHTML = `
-    <p>My first name is: ${firstName.value} and my last name is: ${lastName.value}</p>
-    <p>My email is: ${email.value}</p>
-    <p>My birth date is: ${birthDate.value}</p>
-    <p>My interests are: ${interestsText}</p>
-  `;
-    
+        <p>My first name is: ${firstName.value} and my last name is: ${lastName.value}</p>
+        <p>My email is: ${email.value}</p>
+        <p>My birth date is: ${birthDate.value}</p>
+        <p>My interests are: ${interestsText}</p>
+    `;
+
+    // Makes the output div visible    
     outputDiv.style.display = 'block';
     
     // Clears the form
@@ -50,6 +54,7 @@ mainForm.addEventListener('submit', function (e) {
     email.value = '';
     password.value = '';
     birthDate.value = '';
-    interests.forEach((box) => { box.checked = false; }); // unchecks all checkboxes
+    interests.forEach((box) => 
+        { box.checked = false; }); // unchecks all checkboxes
 
 });

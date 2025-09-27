@@ -56,7 +56,7 @@ em {
 
 .main_form_field_input:focus {
     border-color: blue;
-    outline: rgb (0, 0, 255);
+    outline: rgb(0, 0, 255);
 
 }
 
