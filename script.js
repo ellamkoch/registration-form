@@ -22,13 +22,13 @@ mainForm.addEventListener("submit", function (e) {
    // console.log(`Birth Date: ${birthDate.value}`);
    
     // Loop through the checkboxes to see which ones are checked
-    //const selectedInterests = []; // makes array to hold selected interests
-    //interests.forEach((box) => { // loops through each checkox in nodelist called "interests"
+    const selectedInterests = []; // makes array to hold selected interests
+    interests.forEach((box) => { // loops through each checkox in nodelist called "interests"
      //  console.log (`Interest: ${box.value}, Checked: ${box.checked}`); //logs value and checked status of each box
-       // if(box.checked) { // if a box is checked, next line then logs the value into the selectedIntersts array
-        //    selectedInterests.push(box.value);
-       // }
-    //}); 
+       if(box.checked) { // if a box is checked, next line then logs the value into the selectedIntersts array
+            selectedInterests.push(box.value);
+      }
+    }); 
 
     const interestsText = selectedInterests.length // check if any interests were selected
             ? selectedInterests.join(", ") // join them into a comma separated string ? is shorthand for an if/then statement. In this case, the ? tells the code to do the next thing if true. 
@@ -41,9 +41,11 @@ mainForm.addEventListener("submit", function (e) {
     outputDiv.innerHTML = `
         <p>My first name is: ${firstName.value} and my last name is: ${lastName.value}</p>
         <p>My email is: ${email.value}</p>
+        <p>My password is: ${password.value}</p> 
         <p>My birth date is: ${birthDate.value}</p>
         <p>My interests are: ${interestsText}</p>
     `;
+    // Note: In a real application, I wouldn't display the password like this for security reasons.
 
     // Makes the output div visible    
     outputDiv.style.display = 'block';
