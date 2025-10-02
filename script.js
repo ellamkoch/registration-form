@@ -41,7 +41,6 @@ mainForm.addEventListener("submit", function (e) {
     outputDiv.innerHTML = `
         <p>My first name is: ${firstName.value} and my last name is: ${lastName.value}</p>
         <p>My email is: ${email.value}</p>
-        <p>My password is: ${password.value}</p> 
         <p>My birth date is: ${birthDate.value}</p>
         <p>My interests are: ${interestsText}</p>
     `;

@@ -135,9 +135,6 @@ em {
 /* output section styles */
 #output {
     display: none; /*hidden by default*/
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
